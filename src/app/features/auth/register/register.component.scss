@@ -1,4 +1,4 @@
-$colors: (
+ $colors: (
     'primary': #6a11cb,
     'secondary': #2575fc,
     'success': #00c853,
@@ -136,19 +136,28 @@ $colors: (
     justify-content: $justify;
   }
   
+
+.app-wrapper{
+  height: 100vh;
+  width: auto;
+  background-color: #00c853
+}
+
   .login {
     @include login-grid(70% 30%, center);
     height: map-get($sizes, 'login-height');
+  //  background: #00c853
   }
   //contenedor registros parte uno
-  .login-info {
+  .auth-info-section {
     @include login-grid(1fr, start);
     position: relative;
   //  background-color: #ff242429;
-    background-color:none;
+    //background-color:none;
     width: map-get($sizes, 'login-info-width');
     height: map-get($sizes, 'login-info-height');
-    margin-left: map-get($spacing, 'sm');
+    margin: auto;
+    //margin-left: map-get($spacing, 'sm');
     border-radius: map-get($sizes, 'border-radius-large');
     box-shadow: map-get($shadow-values, 'soft');
     z-index: 55;
@@ -192,6 +201,10 @@ $colors: (
     border-radius: map-get($sizes, 'border-radius-medium');
     @include login-grid(55% 45%, center);
     align-items: center;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    display: grid;
     
     &:hover {
       box-shadow: 3px 5px 34px 7px map-get($colors, 'shadow-color');
@@ -345,22 +358,5 @@ $colors: (
   .devotions {
     color: map-get($colors, 'white');
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+   
+   

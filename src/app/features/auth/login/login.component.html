@@ -1,47 +1,39 @@
+<div class="app-wrapper">
+    <div class="login login-containerg">
+        <section>
+            <div class="login-info">
+                <div class="login-nav">
+                    <p>About US</p>
+                    <p>Help</p>
+                    <p>Mor information</p>
+                </div>
+                <div class="stuffed"></div>
+                <div class="login-footer">
+                    <p>parte1</p>
+                    <p>parte2</p>
+                    <p>parte3</p>
+                    <p>parte4</p>
+                </div>
+            </div>
+        </section>
+        <section class="login-containerl">
+            <div class="login-container">
+                <div class="login-data">
+                    <h2 class="login-title">Iniciar Sesión</h2>
 
-<div class="login login-containerg">
-    <section>
-        Login
-     <div class="login-info ">
-         <div class="login-nav">
-             <p>About US</p>
-             <p>Help</p>
-             <p>Mor information</p>
-         </div>
-         <div class="stuffed"></div>
-         <div class="login-footer">
-             <p>parte1</p>
-             <p>parte2</p>
-             <p>parte3</p>
-             <p>parte4</p>
-         </div>
-     </div>
- </section>
- <section class="login-containerl ">
-     <div class="login-container">
-         <div class="login-data">
-             <h2 class="login-title">Iniciar Sesión</h2>
-             <div class="form-group">
-               <!--  <input 
-                 type="email" 
-                 [(ngModel)]="email" 
-                 placeholder="Ingresa tu correo"
-                 class="form-control"
-             >  -->
-             </div>
-             <div class="button-group">
-             <button class="btn login-btn" (click)="onLogin()" >Iniciar</button>
-             <button class="btn home-btn" (click)="goToRegister()">Registrarse</button>
-             </div>
-         </div>
-     </div>
- </section>
- </div>
- 
- <div class="layered-text">
-     <p class="shadow">wellcome</p>
-     <div *ngIf="citaBiblica">{{ citaBiblica }}</div>
- </div>
- 
- 
- 
+                    <input type="email" [(ngModel)]="email" placeholder="Ingresa tu correo" class="form-control">
+
+                </div>
+                <div class="button-group">
+                    <button class="btn login-btn" (click)="onLogin()">Iniciar</button>
+                    <button class="btn home-btn" (click)="goToRegister()">Registrarse</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="layered-text">
+    <p class="shadow">welcome</p>
+    <div *ngIf="citaBiblica">{{ citaBiblica }}</div>
+</div>

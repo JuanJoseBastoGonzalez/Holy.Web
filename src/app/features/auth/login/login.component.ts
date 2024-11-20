@@ -14,9 +14,9 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   onLogin(): void {
-    this.router.navigate(['/home']);//pendiente quitar solo de pruebas de navegacion
+   // this.router.navigate(['/home']);//pendiente quitar solo de pruebas de navegacion
     if (this.email) {
-      alert(`Logging in with email: ${this.email}`);
+      //alert(`Logging in with email: ${this.email}`);
       this.router.navigate(['/home']); // Navegación con Router
     } else {
       alert('Please enter your email address.');
@@ -24,7 +24,7 @@ export class LoginComponent {
   }
 
   goToRegister(): void {
-    alert(`Redirecting to register: ${this.email}`);
+   // alert(`Redirecting to register: ${this.email}`);
     this.router.navigate(['/auth/register']);
   }
 

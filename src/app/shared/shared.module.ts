@@ -4,23 +4,30 @@ import { YoutubeVideoComponent } from './youtube-video/youtube-video.component';
 import { VideoCardComponent } from './video-card/video-card.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
 import { EmbedVideoPipe } from './pipes/embed-video.pipe';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component';
 
 const components = [
   YoutubeVideoComponent,
   VideoCardComponent,
-  EmbedVideoPipe
+  NavbarComponent,
+  SidebarComponent,
+  FooterComponent,
 ];
 
 @NgModule({
   declarations: [
-    ...components,    
+    ...components,
+    EmbedVideoPipe, // Declaración del pipe
   ],
   imports: [
     CommonModule,
-    MaterialDesignModule
+    MaterialDesignModule,
   ],
   exports: [
-    ...components
+    ...components,
+    EmbedVideoPipe, // Exportación del pipe
   ]
 })
 export class SharedModule { }

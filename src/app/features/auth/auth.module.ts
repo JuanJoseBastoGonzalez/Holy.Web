@@ -22,7 +22,7 @@ import { AppRoutingModule } from './auth-routing.module';
     CommonModule,
     AppRoutingModule,
     SharedModule,
-    MaterialDesignModule
+    MaterialDesignModule,FormsModule,ReactiveFormsModule
   ]
 })
 export class AuthModule {}

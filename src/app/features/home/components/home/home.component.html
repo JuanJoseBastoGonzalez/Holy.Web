@@ -1,3 +1,10 @@
+<app-navbar></app-navbar>
+<div class="main-layout">
+  <app-sidebar></app-sidebar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
 <section class="home-video-gallery">
   @for (video of videoArray; track video.id) {
     <app-video-card [title]="video.title" [embedUrl]="(video.watchUrl | embedVideo)!" />
@@ -5,3 +12,6 @@
     No hay videos
   }
 </section>
+
+
+<app-footer></app-footer>

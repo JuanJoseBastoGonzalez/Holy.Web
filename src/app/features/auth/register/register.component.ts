@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -12,8 +12,38 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 })
 
 export class RegisterComponent implements OnInit {
+  firstname: string = '';
+  lastname: string = '';
+  email: string = '';
+  email2: string = '';
   userForm!: FormGroup;
-  constructor(private router: Router) {}
+
+  constructor(private router: Router) {
+   /*  this.userForm = new FormGroup({
+      firstname: new FormControl(this.firstname, Validators.required),
+      lastname: new FormControl(this.lastname, Validators.required),
+      email: new FormControl(this.email, [Validators.required, Validators.email]),
+      email2: new FormControl(this.email2, [Validators.required, Validators.email])
+    }); */
+  }
+ /*  register(): void {
+    // Verifica que todos los campos sean válidos y que los correos coincidan
+    if (this.userForm.valid && this.email === this.email2) {
+      alert(`Logging in with email: ${this.email}`);
+      this.router.navigate(['/home']); // Navegación con Router
+    } else {
+      // Mostrar errores específicos
+      if (this.email !== this.email2) {
+        alert('Email and confirm email must match.');
+      } else {
+        alert('Please enter your data correctly.');
+      }
+    }
+  } */
+
+
+
+
 
   //need create validation of data fake or not data
   ngOnInit(): void {
@@ -34,9 +64,11 @@ export class RegisterComponent implements OnInit {
     return email && confirmEmail && email === confirmEmail ? null : { 'emailMismatch': true };
   }
 
+
   onSubmit(): void {
     if (this.userForm.valid) {
       console.log('Formulario enviado:', this.userForm.value);
+      this.router.navigate(['/home']);
       // Aquí puedes agregar la lógica para enviar el formulario
     } else {
       console.error('Formulario inválido');
@@ -55,6 +87,6 @@ export class RegisterComponent implements OnInit {
   }
   goToLogin(): void {
     console.log('Iniciar sesión');
-    this.router.navigate(['/login'])
+    this.router.navigate(['/auth/login'])
   }
 }

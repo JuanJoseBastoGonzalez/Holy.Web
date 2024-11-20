@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 interface Video {
   id: number;
   title: string;

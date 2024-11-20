@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { MaterialDesignModule } from '../../shared/material-design/material-design.module';
 
+
 @NgModule({
   declarations: [
     HomeComponent,
